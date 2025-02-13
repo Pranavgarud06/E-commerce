@@ -1,7 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from "../Assets/back1.webp"; 
+import backgroundImage from "../assets/back1.webp"; 
 
 const Checkout = () => {
   const { cart, clearCart } = useCart();
