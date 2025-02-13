@@ -52,33 +52,33 @@ const ProductDetails = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="p-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-pink-100/50 backdrop-blur-md shadow-xl rounded-lg">
+       <div
+  className="p-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-pink-100/50 backdrop-blur-md shadow-xl rounded-lg w-[800px] h-[500px]"
+>
   {/* Image Section */}
-  <div className="w-full md:w-1/2">
+  <div className="w-full h-[250px] flex items-center justify-center">
     <img
       src={product?.images?.length > 0 ? product.images[0] : "/placeholder.jpg"}
       alt={product?.title ?? "Product Image"}
-      className="w-full h-96 object-cover rounded-lg shadow-md"
-      onError={(e) => { e.target.src = "/placeholder.jpg"; }} // Ensure broken images are handled
+      className="w-full h-full object-cover rounded-lg shadow-md"
+      onError={(e) => { e.target.src = "/placeholder.jpg"; }} 
     />
-      </div>
+  </div>
 
+  {/* Details Section */}
+  <div className="w-full flex flex-col justify-between h-[250px] text-white">
+    <h1 className="text-xl text-black font-bold truncate">{product.title}</h1>
+    <p className="text-lg font-semibold text-black mt-2">${product.price}</p>
+    <p className="text-black text-sm line-clamp-3">{product.description}</p>
 
-
-        {/* Details Section */}
-        <div className="w-full md:w-1/2 text-white">
-          <h1 className="text-3xl text-black font-extrabold">{product.title}</h1>
-          <p className="text-xl font-semibold text-black mt-2">${product.price}</p>
-          <p className="text-black mt-4">{product.description}</p>
-
-          <button
-            onClick={handleAddToCart}
-            className="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:opacity-80 transition"
-          >
-            Add to Cart
-          </button>
-        </div>
-      </div>
+    <button
+      onClick={handleAddToCart}
+      className="mt-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg text-lg font-semibold hover:opacity-80 transition"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
 
       {/* Modal for Login Prompt */}
       {showModal && (
