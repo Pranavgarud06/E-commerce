@@ -1,6 +1,6 @@
 import { useCart } from "../context/CartContext";
 import { useNavigate, Link } from "react-router-dom";
-import backgroundImage from "../Assets/back1.webp"; 
+import backgroundImage from "../assets/back1.webp"; 
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
