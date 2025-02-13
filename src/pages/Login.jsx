@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from "../Assets/back1.webp"; 
+import backgroundImage from "../assets/back1.webp"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");
