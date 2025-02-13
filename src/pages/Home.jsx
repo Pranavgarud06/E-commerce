@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import ProductList from "../components/ProductList";
-import backgroundImage from "../Assets/back1.webp"; 
+import backgroundImage from "../assets/back1.webp"; 
 
 const Home = () => {
   const navigate = useNavigate();
