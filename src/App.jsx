@@ -5,7 +5,7 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
-import Checkout from "./pages/checkout";
+import Checkout from "./pages/Checkout";
 import SearchResults from "./components/SearchResult";
 
 function App() {
