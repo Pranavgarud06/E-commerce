@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import axios from "axios";
-import backgroundImage from "../Assets/back1.webp"; 
+import backgroundImage from "../assets/back1.webp"; 
 
 const SearchResults = () => {
   const [searchParams] = useSearchParams();
