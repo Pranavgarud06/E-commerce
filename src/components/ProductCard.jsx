@@ -5,10 +5,14 @@ const ProductCard = ({ product }) => {
     <div className="bg-black/10 backdrop-blur-md shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
       {/* Product Image */}
       <img
-        src={product.images?.[0] || "/placeholder.jpg"}
-        alt={product.title}
-        className="w-full h-56 object-cover"
-      />
+          src={
+          typeof product.images === "string"
+            ? product.images // If it's a plain string, use it directly
+              : JSON.parse(product.images || "[]")[0] || "/placeholder.jpg" // If it's a stringified array, parse and use the first image
+            }
+     alt={product.title}
+     className="w-full h-56 object-cover"
+/>
 
       {/* Product Info */}
       <div className="p-4 text-black">
