@@ -26,20 +26,6 @@ Email: fakemail123@gmail.com
 
 Password: 123456
 
-📂 Project Structure
-
-/e-commerce
-│── /public        # Static assets
-│── /src           # Source code
-│   │── /components # Reusable UI components
-│   │── /pages      # Application pages (Home, Cart, Checkout, etc.)
-│   │── /context    # Context API for state management
-│   │── /assets        # Logos and background images
-│   │── App.js      # Main component
-│   │── index.js    # Entry point
-│── package.json   # Dependencies and scripts
-│── README.md      # Documentation
-
 📜 Installation & Setup
 
 Follow these steps to set up the project locally:
