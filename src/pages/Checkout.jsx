@@ -36,7 +36,7 @@ const Checkout = () => {
     setTimeout(() => {
       alert("Order placed successfully!");
       clearCart();
-      navigate("/home");
+      navigate("/");
     }, 2000);
   };
 
