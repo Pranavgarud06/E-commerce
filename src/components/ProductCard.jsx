@@ -5,11 +5,14 @@ const ProductCard = ({ product }) => {
     <div className="bg-black/10 backdrop-blur-md shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
       {/* Product Image */}
       <img
-          src={
-          typeof product.images === "string"
-            ? product.images // If it's a plain string, use it directly
-              : JSON.parse(product.images || "[]")[0] || "/placeholder.jpg" // If it's a stringified array, parse and use the first image
-            }
+        
+         src={
+      Array.isArray(product.images) // If it's already an array, use the first image
+        ? product.images[0] || "/placeholder.jpg"
+        : typeof product.images === "string" && product.images.startsWith("[") // Check if it's a stringified array
+        ? JSON.parse(product.images || "[]")[0] || "/placeholder.jpg"
+        : product.images || "/placeholder.jpg" // If it's a plain string, use it directly
+    }
      alt={product.title}
      className="w-full h-56 object-cover"
 />
